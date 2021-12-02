@@ -1,0 +1,26 @@
+
+<!-- window.location 是寫表單送出成功後要進到哪一個頁面 -->
+<iframe name="iframe_redirect" id="iframe_redirect" style="display:none;" onload="if(typeof sent_redirect!='undefined'){window.location='https://www.google.com.tw/';}"></iframe>
+
+<!-- action裡的網址，從google form的檢視表單，再用開發人員工具，搜尋「formResponse」可以看到 -->
+<form onsubmit="sent_redirect=true" target="iframe_redirect" class="" action="https://docs.google.com/forms/d/e/1FAIpQLSeTnRm3rktnhhKfdGHVXOUOjkB4QqXtN4RwW0b7SzkPUcRbAA/formResponse" method="post">
+  <div>
+    <!-- name值，從google form的檢視表單，再用開發人員工具，搜尋「entry.」可以看到 -->
+    <input type="text" name="entry.1899226177" value="">
+  </div>
+  <div>
+    <input type="text" name="entry.1863629496" value="">
+  </div>
+  <div>
+    <select class="" name="entry.1716309882">
+      <!-- option的value，從google form的檢視表單，再用開發人員工具，搜尋「data-value」可以看到 -->
+      <option value="Class">班級</option>
+      <option value="Number">座號</option>
+      <option value="Name">姓名</option>
+      <option value="Chi">國文</option>
+      <option value="Eng">英文</option>
+    </select>
+  </div>
+  <button type="submit" name="button" value="submit">submit</button>
+
+</form>
